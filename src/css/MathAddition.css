@@ -1,0 +1,228 @@
+#root{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.row-container
+{
+	height: calc(100vh/6); 
+	margin-left: 0;
+	margin-right: 0;
+	position: relative;
+}
+.row-container:first-child
+{
+	height: calc(100vh/12); 
+}
+
+.row-container.card-row
+{
+	height: calc(37.5vh);
+	width: 100%;
+	
+} 
+
+.alert
+{
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	margin-top: 0.5vw;
+	margin-bottom: 0.5vw;
+	
+	height: calc(100vh/12); 
+	font-size: 3vw;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+}
+
+.alert .pull-right
+{
+	font-size: 2vw;
+}
+
+
+.card-row .card:not(.sign)
+{
+	width: 25%;
+	font-size: 10vw  !important;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+.card-row .sign.card
+{
+	width: 12.5%;
+	font-size: 7vw  !important;
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+.card-row .card > div
+{ 
+	text-align: center; 
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	height: calc(37.5vh - 2vw);
+}
+.card-row .card:not(.sign) > div
+{
+	background: white;
+	border: 0.5vw solid #233;
+	border-radius: 1vw;
+}
+.card-row .card.wrong > div,
+.card-row .card.correct > div
+{ 
+	position: relative;
+}
+.card-row .card.correct > div
+{
+	border-color: #4cae4c;
+	background-color: #dff0d8; 
+}
+.card-row .card.wrong > div
+{
+	border-color: #c9302c;
+	background-color: #f2dede; 
+}
+.card-row .card.wrong > div:after,
+.card-row .card.correct > div:after
+{
+	position: absolute;  
+	font-size: 2vw;
+	width: 100%;
+	text-align: center;
+	bottom: 1vw;
+}
+.card-row .card.correct > div:after
+{ 
+	content: 'CORRECT!';
+	color: #3c763d; 
+}
+.card-row .card.wrong > div:after
+{ 
+	content: 'WRONG!';
+	color: #a94442; 
+}
+.card.tile 
+{
+	width: 10%;
+	font-size: 5vw  !important; 
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+.card.tile > button
+{
+	background: white;
+	text-align: center;
+	border: 0.3vw solid #233;
+	border-radius: 1vw;
+	height: calc(100vh/12); 
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 5vw;
+    width: 100%; 
+    
+    width: 100%;
+}
+
+.results-tile
+{ 
+	width: 12.5%; 
+	margin-left: 6%; 
+	float: left;
+	text-align: right;
+	padding-top: 15px;
+	font-size:3vw;
+}
+.my-answer.card.answer-card  
+{ 
+	width: 50%;
+	margin-left: 0; 
+	float: left;
+}
+
+.command-buttons
+{
+	width: 25%;   
+	float: left;
+	height: calc(37.5vh - 2vw);
+	padding-top: 1vw;
+	padding-bottom: 1vw;
+	padding-left: 1vw;
+	padding-right: 1vw;
+}
+
+.command-buttons > button
+{
+	height: 33.3%;
+	font-size: 4vw !important;
+	line-height: 4vw;
+	padding-top: 0.5vw;
+	padding-bottom: 0.5vw;
+	padding-left: 0.5vw;
+	padding-right: 0.5vw;
+}  
+
+/** small devices where width tends to be smaller than height **/
+@media only screen  
+  and (orientation: portrait) {
+  	#root{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+  	
+  	.row-container
+	{
+		height: calc(100vw/6);  
+	}
+	.row-container:first-child
+	{
+		height: calc(100vw/12); 
+	}
+	
+	.row-container.card-row
+	{
+		height: calc(37.5vw); 
+	} 
+	
+	.alert
+	{ 
+		height: calc(100vw/12);  
+	}  
+	.card-row .card > div
+	{  
+		height: calc(37.5vw - 2vw);
+	}   
+	
+	.card-row .card:not(.sign) > div
+	{  
+	}
+	
+	.card.tile > div
+	{ 
+		height: calc(100vw/12);  
+	} 
+	
+	.command-buttons
+	{ 
+		height: calc(37.5vw - 2vw); 
+	} 
+
+
+  	
+}	

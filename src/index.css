@@ -1,0 +1,11 @@
+
+/** MAIN CSS **/
+body
+{ 
+    background-size: 20px 20px;
+    background-repeat: repeat;
+    background-position: 5px center; 
+    background-image: radial-gradient(ellipse at center, #90CAF9 0%, #90CAF9 30%, transparent 30%) ;
+    background-color: #BBDEFB !important;
+}
+	 
